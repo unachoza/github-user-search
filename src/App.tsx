@@ -1,15 +1,21 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import Card from "./Components/Card/Card";
+import Form from "./Components/Form/Form";
 import "./App.css";
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
-		<>
-			<p className="read-the-docs">Click</p>
-		</>
+		<body>
+			<nav>
+				<div className="logo">devfinder</div>
+				<div className="toggle">Light Dark</div>
+			</nav>
+			<Form />
+			{/* <form action="">
+				<input type="text" placeholder="Search GitHub username..." />
+				<button>Search</button>
+			</form> */}
+			<Card />
+		</body>
 	);
 }
 
