@@ -1,0 +1,16 @@
+.icon-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.title-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.icon {
+}
+.title {
+}
+.detail {
+}

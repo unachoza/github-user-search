@@ -6,8 +6,8 @@ function App() {
 	return (
 		<body>
 			<nav>
-				<div className="logo">devfinder</div>
-				<div className="toggle">Light Dark</div>
+				<h1 className="logo">devfinder</h1>
+				<h3 className="toggle">Light Dark</h3>
 			</nav>
 			<Form />
 			{/* <form action="">
