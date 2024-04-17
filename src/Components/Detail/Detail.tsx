@@ -1,17 +1,17 @@
 import "./Detail.css";
 
-type label = "title" | "icon";
+type Label = "title" | "icon";
 
-interface detailProps {
-	label: label;
+interface DetailProps {
+	label: string;
 	detail: string;
 }
 
-const Detail = () => {
+const Detail = ({ label, detail }: DetailProps) => {
 	return (
 		<div className="wrapper">
-			<div className="icon-or-title"></div>
-			<div className="detail"></div>
+			<h3 className="icon-or-title">{label}</h3>
+			<div className="detail">{detail}</div>
 		</div>
 	);
 };
