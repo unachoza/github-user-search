@@ -5,22 +5,22 @@ import Form from "./Components/Form/Form";
 import Detail from "./Components/Detail/Detail";
 import "./App.css";
 
-const ProfileDataResult = {
-	name: "",
-	handle: "",
-	joined: "",
-	bio: "",
-	repos: 10,
-	followers: 10,
-	following: 10,
-	location: "san francisco",
-	link: "https:arianna.dev",
-	twitter: "",
-	company: "",
+const INITIAL_PROFILE_DATA = {
+	name: "The Octocat",
+	handle: "@octocat",
+	joined: "25 Jan 2011",
+	bio: "This profile has no bio",
+	repos: 8,
+	followers: 3938,
+	following: 9,
+	location: "San Francisco",
+	link: "https://github.blog",
+	twitter: "Not Available",
+	company: "@github",
 };
 
 const App = () => {
-	const [profile, setProfile] = useState<ProfileData | null>(null);
+	const [profile, setProfile] = useState<ProfileData | null>(INITIAL_PROFILE_DATA);
 
 	return (
 		<body>
@@ -29,8 +29,8 @@ const App = () => {
 				<h3 className="toggle">Light Dark</h3>
 			</nav>
 			<Form />
-			<Card />
-			<Detail label="following" detail="10" />
+			<Card profileData={profile} />
+			{/* <Detail label="following" detail="10" /> */}
 		</body>
 	);
 };

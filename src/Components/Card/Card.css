@@ -7,3 +7,29 @@
 	border-radius: 10px;
 	background-color: #fefefe;
 }
+.profile-details {
+	margin: 10px 0;
+}
+
+.profile-details > div {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+div.repo-stats {
+	display: flex;
+	justify-content: space-around;
+	margin: 10px 0;
+}
+
+div.contact-info {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 10px 0;
+}
+
+.card-container {
+	display: block;
+}
