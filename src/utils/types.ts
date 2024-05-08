@@ -11,3 +11,5 @@ export type ProfileData = {
 	twitter: string;
 	company: string;
 };
+
+export type ThemeType = "light" | "dark";

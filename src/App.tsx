@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ProfileData } from "./utils/types";
+import { ProfileData, ThemeType } from "./utils/types";
 import Card from "./Components/Card/Card";
 import Form from "./Components/Form/Form";
 import Detail from "./Components/Detail/Detail";
@@ -21,12 +21,13 @@ const INITIAL_PROFILE_DATA = {
 
 const App = () => {
 	const [profile, setProfile] = useState<ProfileData | null>(INITIAL_PROFILE_DATA);
+	const [theme, setTheme] = useState<ThemeType>("light");
 
 	return (
 		<body>
 			<nav>
 				<h1 className="logo">devfinder</h1>
-				<h3 className="toggle">Light Dark</h3>
+				<h3 className="toggle">{theme === "light" ? "Light" : "Dark"}</h3>
 			</nav>
 			<Form />
 			<Card profileData={profile} />
