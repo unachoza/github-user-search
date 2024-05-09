@@ -21,13 +21,24 @@ const INITIAL_PROFILE_DATA = {
 
 const App = () => {
 	const [profile, setProfile] = useState<ProfileData | null>(INITIAL_PROFILE_DATA);
-	const [theme, setTheme] = useState<ThemeType>("light");
+	const [theme, setTheme] = useState<ThemeType>("dark");
 
+	const handleThemeChange = () => {
+		setTheme("light");
+	};
 	return (
 		<body>
 			<nav>
 				<h1 className="logo">devfinder</h1>
-				<h3 className="toggle">{theme === "light" ? "Light" : "Dark"}</h3>
+				<div className="theme-toggle-container">
+					<img
+						className="theme-icon"
+						src={`/icon-${theme === "light" ? "sun" : "moon"}.svg`}
+						alt="search icon"
+						onClick={handleThemeChange}
+					/>
+					<h3 className="toggle">{theme === "light" ? "Light" : "Dark"}</h3>
+				</div>
 			</nav>
 			<Form />
 			<Card profileData={profile} />

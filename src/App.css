@@ -45,9 +45,16 @@ nav {
 	justify-content: space-between;
 	width: 100%;
 }
+.theme-toggle-container {
+	display: flex;
+}
 .toggle {
 	display: flex;
 	align-items: center;
+}
+.theme-icon {
+	display: flex;
+	padding: 10px;
 }
 button {
 	color: var(--clear);
