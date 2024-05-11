@@ -18,7 +18,6 @@ export const useAPI = (url: string) => {
 			setLoading(false);
 		}
 	};
-	fetchUserData();
 
-	return { data, error, loading };
+	return { data, error, loading, fetchUserData };
 };
