@@ -13,10 +13,10 @@ const INITIAL_PROFILE_DATA = {
 	repos: 8,
 	followers: 3938,
 	following: 9,
-	location: "San Francisco",
-	link: "https://github.blog",
-	twitter: "Not Available",
-	company: "@github",
+	"/icon-location.svg": "San Francisco",
+	"/icon-twitter.svg": "Not Available",
+	"/icon-website.svg": "https://github.blog",
+	"/icon-company.svg": "@github",
 };
 
 const App = () => {

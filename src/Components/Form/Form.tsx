@@ -5,7 +5,7 @@ const Form = () => {
 		<form className="container">
 			<img className="icon" src="/icon-search.svg" alt="search icon" />
 			<input type="search" />
-			<button>Search</button>
+			<button className="search-button">Search</button>
 		</form>
 	);
 };

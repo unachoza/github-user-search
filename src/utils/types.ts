@@ -6,8 +6,8 @@ export type ProfileData = {
 	repos: number;
 	followers: number;
 	following: number;
-	location: string;
-	link: string;
+	'/icon-location.svg': string;
+	'/icon-website.svg': string;
 	twitter: string;
 	company: string;
 };

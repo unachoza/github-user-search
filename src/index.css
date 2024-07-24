@@ -15,7 +15,6 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	background-color: #f6f8ff;
 }
 body {
 	display: flex;
@@ -24,6 +23,7 @@ body {
 	flex-wrap: wrap;
 	place-items: center;
 	min-height: 100vh;
+	width: 60%;
 	font-family: "Space Mono", monospace;
 }
 
