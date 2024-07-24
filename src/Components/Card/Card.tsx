@@ -21,7 +21,7 @@ const Card = ({ profileData }: Props) => {
 						.map((entry, i) => {
 							return (
 								<div key={i}>
-									<div>{entry[0].toUpperCase()}:</div>
+									<div className="hide">{entry[0].toUpperCase()}:</div>
 									<div>{entry[1]}</div>
 								</div>
 							);

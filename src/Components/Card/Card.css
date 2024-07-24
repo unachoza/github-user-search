@@ -51,6 +51,7 @@ div.contact-info {
 .card-container {
 	display: flex;
 	flex-direction: column;
+	padding-right: 50px;
 }
 .contact-info-icon {
 	width: 18px;
@@ -60,4 +61,8 @@ div.contact-info {
 	display: flex;
 	align-items: center;
 	height: 45px;
+}
+
+.hide {
+	display: none;
 }
