@@ -43,11 +43,10 @@ const Card = ({ profileData }: Props) => {
 					{Object.entries(profileData as { [s: string]: string | number })
 						.slice(7)
 						.map((entry, i) => {
-							console.log({ entry }, { i });
 							return (
 								<div className="contact-detail" key={i}>
 									<img className="contact-info-icon" src={entry[0]} alt="icon" />
-									<div>{entry[1]}</div>
+									<div>{entry[1] ? entry[1] : "not available"}</div>
 								</div>
 							);
 						})}

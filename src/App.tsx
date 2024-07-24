@@ -40,9 +40,8 @@ const App = () => {
 					<h3 className="toggle">{theme === "light" ? "Light" : "Dark"}</h3>
 				</div>
 			</nav>
-			<Form />
+			<Form setProfile={setProfile} />
 			<Card profileData={profile} />
-			{/* <Detail label="following" detail="10" /> */}
 		</body>
 	);
 };
