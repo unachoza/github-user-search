@@ -32,7 +32,7 @@ export const useAPI = (userName: string, fireSearch: boolean) => {
 	useEffect(() => {
 		const fetchUserData = async () => {
 			try {
-				const octokit = new Octokit({ auth: "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" });
+				const octokit = new Octokit({ auth: "" });
 				const res = await octokit.rest.search.users({
 					q: userName,
 				});
