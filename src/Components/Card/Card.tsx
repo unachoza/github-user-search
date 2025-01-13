@@ -9,15 +9,16 @@ const Card = ({ profileData }: Props) => {
 	if (!profileData) {
 		return <div>No profile data available</div>;
 	}
+	console.log(profileData);
 	return (
 		<div className="main-container">
-			<div className="octocat-image">
-				<img src="/Bitmap.svg" alt="github octocat" />
+			<div className="avatar-image">
+				<img src={profileData.avatar} alt="profile avatar" />
 			</div>
 			<div className="card-container">
 				<div className="profile-details">
 					{Object.entries(profileData as { [s: string]: string | number })
-						.slice(0, 4)
+						.slice(1, 5)
 						.map((entry, i) => {
 							return (
 								<div key={i}>
@@ -29,7 +30,7 @@ const Card = ({ profileData }: Props) => {
 				</div>
 				<div className="repo-stats">
 					{Object.entries(profileData as { [s: string]: string | number })
-						.slice(4, 7)
+						.slice(5, 8)
 						.map((entry, i) => {
 							return (
 								<div key={i}>
@@ -41,7 +42,7 @@ const Card = ({ profileData }: Props) => {
 				</div>
 				<div className="contact-info">
 					{Object.entries(profileData as { [s: string]: string | number })
-						.slice(7)
+						.slice(8)
 						.map((entry, i) => {
 							return (
 								<div className="contact-detail" key={i}>

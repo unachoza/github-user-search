@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Octokit } from "octokit";
 
 export const useAPI = (userName: string, fireSearch: boolean) => {
 	const [data, setData] = useState<any>([]);
@@ -7,6 +6,7 @@ export const useAPI = (userName: string, fireSearch: boolean) => {
 	const [loading, setLoading] = useState<Boolean>(false);
 
 	const normalizeProfiledata = (data: any) => ({
+		avatar: data.avatar_url,
 		name: data.name,
 		handle: data.login,
 		joined: convertDate(data.created_at),
@@ -32,12 +32,7 @@ export const useAPI = (userName: string, fireSearch: boolean) => {
 	useEffect(() => {
 		const fetchUserData = async () => {
 			try {
-				const octokit = new Octokit({ auth: "" });
-				const res = await octokit.rest.search.users({
-					q: userName,
-				});
-				const userUrl = await res.data.items[0].url;
-				const response = await fetch(userUrl);
+				const response = await fetch(`https://api.github.com/users/${userName}`);
 				const userData = await response.json();
 				const userDataObject = normalizeProfiledata(userData);
 				setLoading(true);

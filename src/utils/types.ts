@@ -1,4 +1,5 @@
 export type ProfileData = {
+	avatar: string;
 	name: string;
 	handle: string;
 	joined: string;
@@ -6,8 +7,8 @@ export type ProfileData = {
 	repos: number;
 	followers: number;
 	following: number;
-	'/icon-location.svg': string;
-	'/icon-website.svg': string;
+	"/icon-location.svg": string;
+	"/icon-website.svg": string;
 	twitter: string;
 	company: string;
 };
