@@ -28,12 +28,17 @@
 }
 .profile-details {
 	margin: 10px 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .profile-details > div {
 	display: flex;
 	justify-content: space-between;
-	padding: 0 20px;
+	width: 100%;
+	column-count: 2;
+}
+.bio {
 }
 
 div.repo-stats {
@@ -44,9 +49,6 @@ div.repo-stats {
 }
 
 div.contact-info {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
 	margin: 10px 0;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);

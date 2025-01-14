@@ -4,7 +4,7 @@ import { useAPI } from "../../hooks/useAPI";
 import { ProfileData } from "../../utils/types";
 
 interface FormProps {
-	setProfile: Dispatch<SetStateAction<ProfileData | null>>
+	setProfile: Dispatch<SetStateAction<ProfileData | null>>;
 }
 
 const Form = ({ setProfile }: FormProps) => {
@@ -24,6 +24,7 @@ const Form = ({ setProfile }: FormProps) => {
 		<form className="container">
 			<img className="icon" src="/icon-search.svg" alt="search icon" />
 			<input placeholder="Search Github Username" type="search" onBlur={(e) => setUserName(e.target.value)} />
+			{data?.name === undefined && <div className="not-found">Not found</div>}
 			<button onClick={(e) => handleSearch(e)} className="search-button">
 				Search
 			</button>

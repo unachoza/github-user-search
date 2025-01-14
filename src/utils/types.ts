@@ -1,8 +1,8 @@
 export type ProfileData = {
 	avatar: string;
 	name: string;
-	handle: string;
 	joined: string;
+	handle: string;
 	bio: string;
 	repos: number;
 	followers: number;

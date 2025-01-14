@@ -6,19 +6,31 @@ interface Props {
 }
 
 const Card = ({ profileData }: Props) => {
-	if (!profileData) {
+	if (profileData?.name === undefined) {
 		return <div>No profile data available</div>;
 	}
 	console.log(profileData);
 	return (
 		<div className="main-container">
 			<div className="avatar-image">
-				<img src={profileData.avatar} alt="profile avatar" />
+				<img src={profileData?.avatar} alt="profile avatar" />
 			</div>
 			<div className="card-container">
 				<div className="profile-details">
 					{Object.entries(profileData as { [s: string]: string | number })
-						.slice(1, 5)
+						.slice(1, 4)
+						.map((entry, i) => {
+							return (
+								<div key={i}>
+									<div className="hide">{entry[0].toUpperCase()}:</div>
+									<div>{entry[1]}</div>
+								</div>
+							);
+						})}
+				</div>
+				<div className="bio">
+					{Object.entries(profileData as { [s: string]: string | number })
+						.slice(4, 5)
 						.map((entry, i) => {
 							return (
 								<div key={i}>

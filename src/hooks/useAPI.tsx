@@ -8,8 +8,8 @@ export const useAPI = (userName: string, fireSearch: boolean) => {
 	const normalizeProfiledata = (data: any) => ({
 		avatar: data.avatar_url,
 		name: data.name,
-		handle: data.login,
 		joined: convertDate(data.created_at),
+		handle: `@${data.login}`,
 		bio: data.bio,
 		repos: data.public_repos,
 		followers: data.followers,
@@ -34,6 +34,7 @@ export const useAPI = (userName: string, fireSearch: boolean) => {
 			try {
 				const response = await fetch(`https://api.github.com/users/${userName}`);
 				const userData = await response.json();
+				console.log({ userData });
 				const userDataObject = normalizeProfiledata(userData);
 				setLoading(true);
 				setData(userDataObject);

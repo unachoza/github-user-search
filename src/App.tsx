@@ -8,8 +8,8 @@ import "./App.css";
 const INITIAL_PROFILE_DATA = {
 	avatar: "/Bitmap.svg",
 	name: "The Octocat",
-	handle: "@octocat",
 	joined: "25 Jan 2011",
+	handle: "@octocat",
 	bio: "This profile has no bio",
 	repos: 8,
 	followers: 3938,
