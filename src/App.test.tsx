@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-it("should have planets here text ", () => {
+it("should have title text definder", () => {
 	render(<App />);
-	const message = screen.queryByText(/Click/);
+	const message = screen.queryByText(/devfinder/);
 	expect(message).toBeInTheDocument();
 });
